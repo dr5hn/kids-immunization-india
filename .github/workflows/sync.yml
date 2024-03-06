@@ -25,9 +25,10 @@ jobs:
         pip install requests beautifulsoup4 gitpython tabula
 
     - name: Install Java
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        distribution: 'microsoft'
+        java-version: '21'
 
     - name: Crawl and download the file
       run: python .github/scripts/crawl_and_download.py
